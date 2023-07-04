@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-feature-settings: "tnum" on, "lnum" on;
+  -webkit-font-smoothing: antialiased;
+  color: #2f313f;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 nav .nav-bottom {
   display: flex;
   padding-inline: 24px;
@@ -53,6 +61,7 @@ main .hero {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url("/proj/bolt/bolt-react/src/hero.jpg");
   width: 100%;
   height: 70vh;
+  min-height: 500px;
   background-size: cover;
   color: white;
   padding: 20px;
@@ -97,4 +106,246 @@ main .hero .hero-container .hero-text .hero-button {
 }
 main .hero .hero-container .hero-text .hero-button:hover {
   background-color: #1d965c;
+}
+main .container-1 {
+  max-width: 1184px;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+  margin-inline: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+main .container-1 h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+main .container-2 {
+  max-width: 1184px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-inline: auto;
+}
+main .container-2 h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+main .container-2 .box-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+main .container-2 .box-grid .grid-item {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition-duration: 0.2s;
+  text-align: left;
+  background-color: rgba(6, 26, 55, 0.039);
+  min-height: 180px;
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+main .container-2 .box-grid .grid-item:hover {
+  transform: scale(1.02);
+}
+main .container-2 .box-grid .grid-item .item-text {
+  padding-right: 6.5rem;
+}
+main .container-2 .box-grid .grid-item .item-text h5 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+main .container-2 .box-grid .grid-item .item-text p {
+  color: rgba(18, 29, 43, 0.6);
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+main .container-2 .box-grid .grid-item img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  max-width: 130px;
+  max-height: 130px;
+}
+main .container-2 .box-container2 {
+  margin-top: 4.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+main .container-2 .box-container2 .content {
+  display: flex;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  align-items: flex-start;
+}
+main .container-2 .box-container2 .content .box-left {
+  max-width: 496px;
+}
+main .container-2 .box-container2 .content .box-left h2 {
+  font-size: 3rem;
+  letter-spacing: -0.01em;
+  line-height: 3.5rem;
+  text-align: left;
+}
+main .container-2 .box-container2 .content .box-left p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+main .container-2 .box-container2 .content .box-left .list-item {
+  counter-reset: ordered-list-counter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+}
+main .container-2 .box-container2 .content .box-left .list-item .item {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 2rem;
+}
+main .container-2 .box-container2 .content .box-left .list-item .item .item-text {
+  display: flex;
+  flex-direction: column;
+}
+main .container-2 .box-container2 .content .box-left .list-item .item .item-text h5 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+main .container-2 .box-container2 .content .box-left .list-item .item .item-text p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: rgba(18, 29, 43, 0.6);
+}
+main .container-2 .box-container2 .content .box-left .list-item .item:before {
+  content: counter(ordered-list-counter);
+  counter-increment: ordered-list-counter;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 1px;
+  background-clip: content-box;
+  background-color: #32bb78;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  margin-right: 0.75rem;
+  color: white;
+  position: absolute;
+  left: -35px;
+}
+main .container-2 .box-container2 .content .box-right {
+  max-width: 560px;
+  overflow: hidden;
+}
+main .container-2 .box-container2 .content .box-right img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}
+main .container-2 .button button {
+  border: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: rgba(6, 26, 55, 0.039);
+  border-radius: 9999px;
+  color: #2f313f;
+  height: 3rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+main .container-2 .button button:hover {
+  background-color: rgba(6, 26, 55, 0.078);
+}
+main .container-3 {
+  background-color: #f9fafb;
+  padding-bottom: 5.75rem;
+  padding-top: 5.75rem;
+  margin-bottom: 5.75rem;
+}
+main .container-3 .box-container3 {
+  max-width: 1184px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-inline: auto;
+}
+main .container-3 .box-container3 .container3-text {
+  text-align: center;
+}
+main .container-3 .box-container3 .container3-text h2 {
+  font-size: 3rem;
+  letter-spacing: -0.01em;
+  line-height: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+main .container-3 .box-container3 .container3-text p {
+  max-width: 944px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+}
+main .container-3 .box-container3 img {
+  height: auto;
+  max-width: 100%;
+}
+main .container-3 .flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+main .container-3 .flex-wrapper .wrapper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 33.333333%;
+}
+main .container-3 .flex-wrapper .wrapper-item svg {
+  width: 2rem;
+  height: 2rem;
+  color: #1d965c;
+  margin-bottom: 1rem;
+}
+main .container-3 .flex-wrapper .wrapper-item .item-text {
+  text-align: center;
+}
+main .container-3 .flex-wrapper .wrapper-item .item-text h5 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+main .container-3 .flex-wrapper .wrapper-item .item-text p {
+  color: rgba(18, 29, 43, 0.6);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
 }/*# sourceMappingURL=HomePage.css.map */

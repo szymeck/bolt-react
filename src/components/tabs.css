@@ -1,0 +1,156 @@
+.container {
+  max-width: 1184px;
+  margin-top: 4.5rem;
+  margin-inline: auto;
+  transition: ease 0.15s;
+}
+
+.buttons {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.buttons li button {
+  border: rgba(6, 26, 55, 0.161) solid 2px;
+  background-color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
+  color: #2f313f;
+  height: 2.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: ease 0.15s;
+}
+
+.buttons li button:hover {
+  background-color: rgba(6, 26, 55, 0.078);
+}
+
+.buttons li .active-button {
+  background: #2f313f;
+  color: white;
+}
+.buttons li .active-button:hover {
+  background: #2f313f;
+  color: white;
+}
+
+.box-content {
+  display: flex;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.box-content .content-left {
+  max-width: 560px;
+  width: 100%;
+}
+.box-content .content-left img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.box-content .content-right {
+  max-width: 496px;
+  width: 100%;
+}
+.box-content .content-right h3 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.box-content .content-right .list-item {
+  counter-reset: ordered-list-counter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+}
+.box-content .content-right .list-item .item {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 2rem;
+}
+.box-content .content-right .list-item .item .item-text {
+  display: flex;
+  flex-direction: column;
+}
+.box-content .content-right .list-item .item .item-text h5 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.box-content .content-right .list-item .item .item-text p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: rgba(18, 29, 43, 0.6);
+}
+.box-content .content-right .list-item .item:before {
+  content: counter(ordered-list-counter);
+  counter-increment: ordered-list-counter;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 1px;
+  background-clip: content-box;
+  background-color: #32bb78;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  margin-right: 0.75rem;
+  color: white;
+  position: absolute;
+  left: -35px;
+}
+.box-content .content-right .button button {
+  border: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: rgba(6, 26, 55, 0.039);
+  border-radius: 9999px;
+  color: #2f313f;
+  height: 3rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+.box-content .content-right .button button:hover {
+  background-color: rgba(6, 26, 55, 0.078);
+}
+
+.active-content {
+  width: auto;
+  height: auto;
+  visibility: visible;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}/*# sourceMappingURL=tabs.css.map */
