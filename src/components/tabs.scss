@@ -18,6 +18,11 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 2.25rem;
+    flex-wrap: nowrap;
+    overflow:auto;
+  }
+  .buttons::-webkit-scrollbar {
+    display: none;
   }
   .buttons li button {
     border: rgba(6, 26, 55, 0.161) solid 2px;
@@ -32,6 +37,7 @@
     font-weight: 300;
     cursor: pointer;
     transition: ease 0.15s;
+    white-space: nowrap;
   }
  .buttons li button:hover {
     background-color: rgba(6, 26, 55, 0.078);
