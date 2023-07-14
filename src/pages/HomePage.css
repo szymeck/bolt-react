@@ -67,8 +67,49 @@ nav .nav-bottom ul {
   list-style: none;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-nav .nav-bottom ul li {
+nav .nav-bottom ul .drop {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  z-index: 100;
+  box-shadow: 0 4px 6px -1px rgba(26, 27, 35, 0.1), 0 2px 4px -1px rgba(26, 27, 35, 0.06);
+  max-height: 0px;
+  transition: all 0.5s ease;
+  width: 378px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  left: 0;
+  top: 50px;
+  overflow: hidden;
+}
+nav .nav-bottom ul .drop a .drop-item {
+  line-height: 24px;
+  font-size: 16px;
+  padding: 12px;
+  background-color: initial;
+  border-radius: 8px;
+  overflow: hidden;
+}
+nav .nav-bottom ul .drop a .drop-item:hover {
+  background-color: #f4f4f6;
+}
+nav .nav-bottom ul .drop a .drop-item p:first-of-type {
+  font-weight: 700;
+}
+nav .nav-bottom ul .drop a .drop-item p:last-of-type {
+  line-height: 20px;
+  font-size: 14px;
+  color: #747a82;
+  font-weight: 400;
+}
+nav .nav-bottom ul .active-drop {
+  max-height: 800px;
+  padding: 8px;
+}
+nav .nav-bottom ul .link {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
@@ -80,10 +121,10 @@ nav .nav-bottom ul li {
   border-radius: 8px;
   cursor: pointer;
 }
-nav .nav-bottom ul li:hover {
+nav .nav-bottom ul .link:hover {
   background-color: #f4f4f6;
 }
-nav .nav-bottom ul li:after {
+nav .nav-bottom ul .link:after {
   border: solid #a9abb9;
   border-width: 0 2px 2px 0;
   bottom: auto;
@@ -95,10 +136,25 @@ nav .nav-bottom ul li:after {
   transform: rotate(45deg);
   transition: all 0.5s ease-in-out;
 }
+nav .nav-bottom ul .active-link {
+  background-color: #f4f4f6;
+}
+nav .nav-bottom ul .active-link:after {
+  border: solid #a9abb9;
+  border-width: 0 2px 2px 0;
+  bottom: auto;
+  content: "";
+  padding: 4px;
+  position: absolute;
+  right: 11.175px;
+  top: 20.345px;
+  transform: rotate(-135deg);
+  transition: all 0.5s ease-in-out;
+}
 
 main .hero {
   z-index: 1;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url("/proj/bolt/bolt-react/src/hero.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url("/src/hero.jpg");
   width: 100%;
   height: 70vh;
   min-height: 500px;
@@ -497,7 +553,6 @@ main .container-4 .box-container4 .content-box .box-item a .item-image img {
   top: 0;
 }
 main .container-5 {
-  max-width: 1184px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-inline: auto;
@@ -599,4 +654,76 @@ footer .container-top .top-content .top-item .logo-pl2 img {
   height: 20px;
   margin-right: 4px;
   max-width: 100%;
+}
+footer .container-bottom {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+footer .container-bottom .box-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  align-items: center;
+  border: solid;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-color: rgba(6, 26, 55, 0.078);
+  border-top-width: 0;
+}
+footer .container-bottom .box-top .box-left {
+  display: flex;
+  gap: 1.25rem;
+}
+footer .container-bottom .box-top .box-left a {
+  background-color: #f4f4f6;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  text-decoration: none;
+  display: flex;
+  color: inherit;
+}
+footer .container-bottom .box-top .box-right button {
+  border: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgba(6, 26, 55, 0.039);
+  border-radius: 9999px;
+  color: #2f313f;
+  height: 2.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-inline: auto;
+  transition: ease 0.2s;
+}
+footer .container-bottom .box-top .box-right button:hover {
+  background-color: rgba(6, 26, 55, 0.078);
+}
+footer .container-bottom .box-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container-bottom .box-bottom .box-left {
+  color: #818391;
+}
+footer .container-bottom .box-bottom .box-right {
+  color: #818391;
+}
+footer .container-bottom .box-bottom .box-right a {
+  color: inherit;
+  text-decoration: inherit;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  margin-left: 1rem;
+}
+footer .container-bottom .box-bottom .box-right a:hover {
+  color: #1d965c;
 }/*# sourceMappingURL=HomePage.css.map */
