@@ -617,6 +617,7 @@ main {
     padding-right: 1.5rem;
     margin-inline: auto;
     margin-bottom: 7.5rem;
+    max-width: 1184px;
     h2 {
       font-size: 3rem;
       letter-spacing: -0.01em;
@@ -721,7 +722,8 @@ footer {
   .container-bottom {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-
+    max-width: 1184px;
+    margin-inline: auto;
     .box-top {
       display: flex;
       justify-content: space-between;
@@ -751,6 +753,8 @@ footer {
         }
       }
       .box-right {
+        display: flex;
+        column-gap: 0.75rem;
         button {
           border: none;
 

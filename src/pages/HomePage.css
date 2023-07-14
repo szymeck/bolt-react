@@ -593,6 +593,7 @@ main .container-5 {
   padding-right: 1.5rem;
   margin-inline: auto;
   margin-bottom: 7.5rem;
+  max-width: 1184px;
 }
 main .container-5 h2 {
   font-size: 3rem;
@@ -694,6 +695,8 @@ footer .container-top .top-content .top-item .logo-pl2 img {
 footer .container-bottom {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  max-width: 1184px;
+  margin-inline: auto;
 }
 footer .container-bottom .box-top {
   display: flex;
@@ -723,6 +726,11 @@ footer .container-bottom .box-top .box-left a {
   text-decoration: none;
   display: flex;
   color: inherit;
+}
+footer .container-bottom .box-top .box-right {
+  display: flex;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
 }
 footer .container-bottom .box-top .box-right button {
   border: none;
