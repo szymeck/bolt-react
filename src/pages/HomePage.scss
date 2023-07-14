@@ -44,6 +44,7 @@ nav {
   z-index: 999;
   direction: ltr;
     position: relative;
+    
   .nav-top {
     background-color: #f9fafb;
     .nav-content {
@@ -171,6 +172,13 @@ nav {
           -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
           transition: all 0.5s ease-in-out;
+        }
+      }
+      li:nth-child(4){
+        padding-right: 20px;
+        margin-right: 0px;
+        &:after {
+          display: none;
         }
       }
       .active-link {
