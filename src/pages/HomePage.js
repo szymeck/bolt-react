@@ -2,7 +2,7 @@ import React, { useState,useEffect, useRef } from "react";
 import "./HomePage.css";
 import Tabs from "../components/tabs";
 import Tabs2 from "../components/tabs2";
-import Navbb from "../components/navbar";
+
 export default function HomePage() {
   const [toggleState, setToggleState] = useState(false);
   
@@ -31,7 +31,7 @@ export default function HomePage() {
   
 
   return (
-    <div className={toggleState === 1 ||toggleState === 2 || toggleState === 3|| toggleState === 4|| toggleState === 5 ? 'darker' : ""}>
+    <div className={toggleState === 1 ||toggleState === 2 || toggleState === 3|| toggleState === 4|| toggleState === 5 ? 'bd darker' : "bd"}>
     
       <nav>
         <div className="nav-top">
@@ -275,102 +275,7 @@ export default function HomePage() {
               </div>Miasta</li>
           </ul>
         </div>
-        {/* <Navbb /> */}
-        {/* <div className="nav-bottom">
-          <div className="logo">
-            <img src="/bolt-logo.svg" alt="logo"></img>
-          </div>
-          <ul className="links" >
-            <div className="produkty" onClick={()=>{setOpen(!open)}} >
-              <li className="link"  >Produkty</li>
-
-              <div className={`drop ${open? 'active' : 'inactive'}`} >
-                <a>
-                  <div className="drop-item">
-                    <p>Przejazdy</p>
-                    <p>Zamów przejazd w kilka minut!</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className="zostan" onClick={()=>{setOpen1(!open1)}}
-            >
-              <li className="link" >Zostań partnerem Bolt</li>
-              <div className={`drop ${open1? 'active' : 'inactive'}`} >
-                <a>
-                  <div className="drop-item">
-                    <p>asd</p>
-                    <p>Zamów przejazd w kilka minut!</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>asd</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <li className="link">O nas</li>
-            <li className="link">Pomoc</li>
-            <li className="link">Bezpieczeństwo</li>
-            <li className="link">Miasta</li>
-          </ul>
-        </div> */}
+        
       </nav>
 
       <main >
