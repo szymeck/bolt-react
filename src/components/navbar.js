@@ -5,6 +5,9 @@ function Navbb() {
   
     const toggleTab = (index) => {
       setToggleState(index);
+      if (toggleState===index) {
+        setToggleState(false); 
+      }
     };
 
     let menuRef = useRef();

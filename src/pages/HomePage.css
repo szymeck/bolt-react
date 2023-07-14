@@ -12,6 +12,9 @@ body {
   font-weight: 400;
 }
 
+nav {
+  background-color: white;
+}
 nav .nav-top {
   background-color: #f9fafb;
 }
@@ -76,7 +79,7 @@ nav .nav-bottom ul .drop {
   z-index: 100;
   box-shadow: 0 4px 6px -1px rgba(26, 27, 35, 0.1), 0 2px 4px -1px rgba(26, 27, 35, 0.06);
   max-height: 0px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in;
   width: 378px;
   display: flex;
   flex-direction: column;
@@ -153,7 +156,7 @@ nav .nav-bottom ul .active-link:after {
 }
 
 main .hero {
-  z-index: 1;
+  z-index: -1;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url("/src/hero.jpg");
   width: 100%;
   height: 70vh;
@@ -565,6 +568,19 @@ main .container-5 h2 {
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
+}
+
+.darker {
+  background-color: rgba(47, 49, 63, 0.48);
+  content: "";
+  height: 100vh;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  transition: background-color 0.2s ease-in;
+  width: 100%;
+  padding-right: 17px;
+  overflow: hidden;
 }
 
 footer {

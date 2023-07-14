@@ -3,46 +3,36 @@ import "./HomePage.css";
 import Tabs from "../components/tabs";
 import Tabs2 from "../components/tabs2";
 import Navbb from "../components/navbar";
-import { Nav } from "react-bootstrap";
 export default function HomePage() {
-  // const [Height, setHeight] = useState("0px");
-  // const [Height2, setHeight2] = useState("0px");
-  // const [Height3, setHeight3] = useState("0px");
-  // const [Height4, setHeight4] = useState("0px");
+  const [toggleState, setToggleState] = useState(false);
+  
+    const toggleTab = (index) => {
+      setToggleState(index);
+      if (toggleState===index) {
+        setToggleState(false); 
+      }
+    };
 
-  // const handleClickMenu = () =>
-  //   Height == "0px" ? setHeight("800px") : setHeight("0px");
-  // const handleClickMenu2 = () =>
-  //   Height2 == "0px" ? setHeight2("8px") : setHeight2("0px");
-  // const handleClickMenu3 = () =>
-  //   Height3 == "0px" ? setHeight3("800px") : setHeight3("0px");
-  // const handleClickMenu4 = () =>
-  //   Height4 == "0px" ? setHeight4("8px") : setHeight4("0px");
-  const[open,setOpen]=useState(false);
-  const[open1,setOpen1]=useState(false);
-// let menuRef = useRef();
+    let menuRef = useRef();
 
-//   useEffect(()=>{
-//     let handler= (e)=>{
-//       if(!menuRef.current.contains(e.target)){
-//         setOpen(false); 
-       
-//       }
-      
-      
-      
-//     };
+  useEffect(()=>{
+    let handler= (e)=>{
+      if(!menuRef.current.contains(e.target)){
+        setToggleState(false); 
+      }
+    };
 
-//     document.addEventListener("mousedown",handler);
-//     return() =>{
-//       document.removeEventListener("mousedown",handler);
-//     }
-//   });
+    document.addEventListener("mousedown",handler);
+    return() =>{
+      document.removeEventListener("mousedown",handler);
+    }
+  });
 
   
 
   return (
-    <div>
+    <div className={toggleState === 1 ||toggleState === 2 || toggleState === 3|| toggleState === 4|| toggleState === 5 ? 'darker' : ""}>
+    
       <nav>
         <div className="nav-top">
           <div className="nav-content">
@@ -73,7 +63,219 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <Navbb />
+        <div className="nav-bottom">
+          <div className="logo">
+            <img src="/bolt-logo.svg" alt="logo"></img>
+          </div>
+          <ul className="links" ref={menuRef} >
+            
+              <li className={toggleState === 1 ? "link active-link" : "link"}
+          onClick={() => toggleTab(1)}>Produkty
+          <div className={toggleState === 1 ? "drop  active-drop" : "drop"} >
+                <a>
+                  <div className="drop-item">
+                    <p>Przejazdy</p>
+                    <p>Zamów przejazd w kilka minut!</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+              </div></li>
+
+              
+            
+            
+              <li className={toggleState === 2 ? "link active-link" : "link"}
+          onClick={() => toggleTab(2)} >Zostań partnerem Bolt
+          <div className={toggleState === 2 ? "drop  active-drop" : "drop"}>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Zamów przejazd w kilka minut!</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+              </div></li>
+              
+            
+            <li className={toggleState === 3 ? "link active-link" : "link"}
+          onClick={() => toggleTab(3)}><div className={toggleState === 3 ? "drop  active-drop" : "drop"}>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Zamów przejazd w kilka minut!</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+              </div>O nas</li>
+            <li className="link">Pomoc</li>
+            <li className={toggleState === 4 ? "link active-link" : "link"}
+          onClick={() => toggleTab(4)}> <div className={toggleState === 4 ? "drop  active-drop" : "drop"}>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Zamów przejazd w kilka minut!</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+              </div>Bezpieczeństwo</li>
+            <li className={toggleState === 5 ? "link active-link" : "link"}
+          onClick={() => toggleTab(5)}><div className={toggleState === 5 ? "drop  active-drop" : "drop"}>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Zamów przejazd w kilka minut!</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>asd</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+                <a>
+                  <div className="drop-item">
+                    <p>Hulajnogi elektryczne</p>
+                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                  </div>
+                </a>
+              </div>Miasta</li>
+          </ul>
+        </div>
+        {/* <Navbb /> */}
         {/* <div className="nav-bottom">
           <div className="logo">
             <img src="/bolt-logo.svg" alt="logo"></img>
@@ -171,7 +373,7 @@ export default function HomePage() {
         </div> */}
       </nav>
 
-      <main>
+      <main >
         <div
           className="hero"
           style={{
@@ -180,6 +382,7 @@ export default function HomePage() {
             backgroundRepeat: "no-repeat",
           }}
         >
+          
           <div className="hero-container">
             <div className="hero-text">
               <h1>Jeździsz dokąd chcesz, kiedy chcesz</h1>
@@ -687,6 +890,7 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+    
     </div>
   );
 }

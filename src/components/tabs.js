@@ -7,6 +7,7 @@ function Tabs() {
 
   const toggleTab = (index) => {
     setToggleState(index);
+   
   };
 
   return (
