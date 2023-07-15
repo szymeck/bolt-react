@@ -86,26 +86,27 @@ export default function HomePage() {
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Samochody na minuty</p>
+                    <p>Wynajem wysokiej jakości samochodów w przystępnych cenach</p>
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Dostawa Bolt Food</p>
+                    <p>Twoje ulubione jedzenie z szybką dostawą</p>
+                  </div>
+                </a>
+              
+                <a>
+                  <div className="drop-item">
+                    <p>Zakupy z dostawą</p>
+                    <p>Podstawowe produkty z dostawą do domu</p>
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Business</p>
+                    <p>Zarządzaj podróżami służbowymi dla swojego zespołu i klientów</p>
                   </div>
                 </a>
               </div></li>
@@ -118,40 +119,35 @@ export default function HomePage() {
           <div className={toggleState === 2 ? "drop  active-drop" : "drop"}>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Zamów przejazd w kilka minut!</p>
+                    <p>Kierowca</p>
+                    <p>Zarabiaj jako kierowca według własnego grafiku</p>
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Dostawca</p>
+                    <p>Zarabiaj na dostawach jedzenia i zakupów</p>
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Restauracja lub Sklep</p>
+                    <p>Zdobądź więcej zamówień! Dodaj swoją restaurację lub sklepy do Bolt Food</p>
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Flota</p>
+                    <p>Zarabiaj więcej zgłaszając swoją flotę do Bolt</p>
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Bolt Franczyza</p>
+                    <p>Zbuduj i prowadź działalność w imieniu Bolt w swoim kraju</p>
                   </div>
                 </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
+                
               </div></li>
               
             
@@ -159,119 +155,93 @@ export default function HomePage() {
           onClick={() => toggleTab(3)}><div className={toggleState === 3 ? "drop  active-drop" : "drop"}>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Zamów przejazd w kilka minut!</p>
+                    <p>Kariera</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>O nas</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Zielony Plan</p>
+                   
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Blog</p>
+                   
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Prasa</p>
+                    
                   </div>
                 </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
+                
               </div>O nas</li>
             <li className="link">Pomoc</li>
             <li className={toggleState === 4 ? "link active-link" : "link"}
           onClick={() => toggleTab(4)}> <div className={toggleState === 4 ? "drop  active-drop" : "drop"}>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Zamów przejazd w kilka minut!</p>
+                    <p>Bezpieczeństwo pasażerów</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Bezpieczeństwo kierowców</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Bezpieczna jazda na hulajnogach</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Laboratorium bezpieczeństwa</p>
+                    
                   </div>
                 </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
+                
+                
               </div>Bezpieczeństwo</li>
             <li className={toggleState === 5 ? "link active-link" : "link"}
           onClick={() => toggleTab(5)}><div className={toggleState === 5 ? "drop  active-drop" : "drop"}>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Zamów przejazd w kilka minut!</p>
+                    <p>Miasta, w których nas znajdziesz</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>asd</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Lotniska</p>
+                    
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Rozwiązania dla mias</p>
+                   
                   </div>
                 </a>
                 <a>
                   <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
+                    <p>Stacje ładowania</p>
+                    
                   </div>
                 </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
-                <a>
-                  <div className="drop-item">
-                    <p>Hulajnogi elektryczne</p>
-                    <p>Wynajmij hulajnogę lub rower elektryczny</p>
-                  </div>
-                </a>
+               
               </div>Miasta</li>
           </ul>
         </div>
