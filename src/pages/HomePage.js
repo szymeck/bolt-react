@@ -156,7 +156,7 @@ export default function HomePage() {
                 <a>
                   <div className="drop-item">
                     <p>Kariera</p>
-                    
+                    <p>Zatrudniamy 🔥</p>
                   </div>
                 </a>
                 <a>
