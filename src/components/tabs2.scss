@@ -39,7 +39,7 @@
   }
 }
 
-.box-content {
+.box-content2 {
   display: flex;
   column-gap: 5rem;
   align-items: center;
@@ -123,6 +123,54 @@
     display: block;
     
             }
+      }
+      picture{
+        img{
+            max-width: 300px;
+            display: block;
+            height: auto;
+        }
+      }
+    }
+  }
+}
+.box-content3 {
+  background-color: #32bb78;
+  display: none;
+  column-gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  section {
+    
+    border-radius: 1rem;
+    
+    
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+    .section-img {
+     display: flex;
+     flex-direction: column;
+      justify-content: space-between;
+    align-items: center;
+      flex-shrink: 0;
+      position: relative;
+      .appstore{
+        margin-bottom: 1.5rem;
+        img{
+          width: 160px;
+        }
+        
       }
       picture{
         img{

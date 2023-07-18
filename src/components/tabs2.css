@@ -41,7 +41,7 @@
   color: white;
 }
 
-.box-content {
+.box-content2 {
   display: flex;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
@@ -57,7 +57,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
 }
-.box-content section {
+.box-content2 section {
   padding-left: 6rem;
   padding-right: 6rem;
   border-radius: 1rem;
@@ -67,7 +67,7 @@
   align-items: center;
   display: flex;
 }
-.box-content section .section-text {
+.box-content2 section .section-text {
   text-align: left;
   align-items: flex-start;
   width: 50%;
@@ -75,7 +75,7 @@
   display: flex;
   color: white;
 }
-.box-content section .section-text h2 {
+.box-content2 section .section-text h2 {
   font-size: 3rem;
   letter-spacing: -0.01em;
   line-height: 3.5rem;
@@ -83,32 +83,32 @@
   margin-bottom: 1.5rem;
   text-align: left;
 }
-.box-content section .section-text p {
+.box-content2 section .section-text p {
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 2rem;
   font-weight: 500;
 }
-.box-content section .section-text p:last-of-type {
+.box-content2 section .section-text p:last-of-type {
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin-bottom: 0.75rem;
 }
-.box-content section .section-text p:last-of-type a {
+.box-content2 section .section-text p:last-of-type a {
   color: white;
 }
-.box-content section .section-text p:first-of-type {
+.box-content2 section .section-text p:first-of-type {
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 2rem;
   font-weight: 500;
 }
-.box-content section .section-img {
+.box-content2 section .section-img {
   align-self: flex-end;
   flex-shrink: 0;
   position: relative;
 }
-.box-content section .section-img .qr-code {
+.box-content2 section .section-img .qr-code {
   background-color: #fff;
   display: block;
   border-radius: 0.5rem;
@@ -118,7 +118,7 @@
   top: 25%;
   position: absolute;
 }
-.box-content section .section-img .qr-code img {
+.box-content2 section .section-img .qr-code img {
   width: 90%;
   height: 90%;
   bottom: 5%;
@@ -128,7 +128,50 @@
   position: relative;
   display: block;
 }
-.box-content section .section-img picture img {
+.box-content2 section .section-img picture img {
+  max-width: 300px;
+  display: block;
+  height: auto;
+}
+
+.box-content3 {
+  background-color: #32bb78;
+  display: none;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.box-content3 section {
+  border-radius: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.box-content3 section .section-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.box-content3 section .section-img .appstore {
+  margin-bottom: 1.5rem;
+}
+.box-content3 section .section-img .appstore img {
+  width: 160px;
+}
+.box-content3 section .section-img picture img {
   max-width: 300px;
   display: block;
   height: auto;

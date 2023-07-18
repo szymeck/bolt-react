@@ -28,7 +28,7 @@ function Tabs2() {
       <div className="content-tabs">
       
         <div
-          className={toggleState === 1 ? "box-content  active-content" : "box-content"}
+          className={toggleState === 1 ? "box-content2  active-content" : "box-content2"}
         >
           <section>
             <div className="section-text">
@@ -49,7 +49,7 @@ function Tabs2() {
         </div>
 
         <div
-          className={toggleState === 2 ? "box-content  active-content" : "box-content"}
+          className={toggleState === 2 ? "box-content2  active-content" : "box-content2"}
         >
           <section>
             <div className="section-text">
@@ -63,6 +63,44 @@ function Tabs2() {
                 </div>
                 <picture>
                 <img src="/phone-2.webp" alt="phone"></img>
+                </picture>
+            
+            </div>
+          </section>
+        </div>
+
+        
+        
+      </div>
+      <div className="content-tabs2">
+      
+        <div
+          className={toggleState === 1 ? "box-content3  active-content" : "box-content3"}
+        >
+          <section>
+            <div className="section-img">
+                <div className="appstore">
+                <img src="/app.svg" alt="app"></img>
+                </div>
+                <picture>
+                <img src="/phone-3.webp" alt="phone"></img>
+                </picture>
+            
+            </div>
+          </section>
+        </div>
+
+        <div
+          className={toggleState === 2 ? "box-content3  active-content" : "box-content3"}
+        >
+          <section>
+            
+            <div className="section-img">
+                <div className="appstore">
+                <img src="/app.svg" alt="app"></img>
+                </div>
+                <picture>
+                <img src="/phone-4.webp" alt="phone"></img>
                 </picture>
             
             </div>

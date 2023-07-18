@@ -34,6 +34,15 @@ export default function HomePage() {
     <div className={toggleState === 1 ||toggleState === 2 || toggleState === 3|| toggleState === 4|| toggleState === 5 ? 'bd darker' : "bd"}>
     
       <nav>
+        <div className="nav-mobile">
+          <div className="navbutton">
+            <div className="burger">
+            </div>
+            </div>
+            <div className="logo">
+            <img src="/bolt-logo.svg" alt="logo"></img>
+          </div>
+        </div>
         <div className="nav-top">
           <div className="nav-content">
             <div className="logo">
@@ -549,6 +558,9 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
+            <div className="button">
+              <button>Zobacz wszystkie</button>
+            </div>
           </div>
         </div>
         <div className="container-5">
@@ -655,6 +667,20 @@ export default function HomePage() {
                   <a href="">Wytyczne dotyczące marki</a>
                 </li>
               </ul>
+            </div>
+            <div className="app-download">
+              <p>
+                Zamów przejazd
+              </p>
+              <div className="appstore">
+                <img src="/app.svg" alt="app"></img>
+                </div>
+                <p>
+                  Zamów jedzienie
+                </p>
+                <div className="appstore">
+                <img src="/app.svg" alt="app"></img>
+                </div>
             </div>
           </div>
         </div>
