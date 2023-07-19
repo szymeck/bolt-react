@@ -119,8 +119,16 @@ nav .nav-bottom ul .drop {
   left: 0;
   top: 50px;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+nav .nav-bottom ul .drop a {
+  text-decoration: none;
+  color: inherit;
 }
 nav .nav-bottom ul .drop a .drop-item {
+  text-decoration: none;
+  color: inherit;
   line-height: 24px;
   font-size: 16px;
   padding: 12px;
@@ -132,12 +140,16 @@ nav .nav-bottom ul .drop a .drop-item:hover {
   background-color: #f4f4f6;
 }
 nav .nav-bottom ul .drop a .drop-item p:last-of-type {
+  text-decoration: none;
+  color: inherit;
   line-height: 20px;
   font-size: 14px;
   color: #747a82;
   font-weight: 400;
 }
 nav .nav-bottom ul .drop a .drop-item p:first-of-type {
+  text-decoration: none;
+  color: inherit;
   font-weight: 700;
   color: inherit;
   line-height: 24px;
