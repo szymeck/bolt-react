@@ -1,45 +1,57 @@
-import React, { useState,useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./HomePage.css";
 import Tabs from "../components/tabs";
 import Tabs2 from "../components/tabs2";
+import Burger from "../components/burger";
 
 export default function HomePage() {
   const [toggleState, setToggleState] = useState(false);
-  
-    const toggleTab = (index) => {
-      setToggleState(index);
-      if (toggleState===index) {
-        setToggleState(false); 
-      }
-    };
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
-    let menuRef = useRef();
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  };
 
-  useEffect(()=>{
-    let handler= (e)=>{
-      if(!menuRef.current.contains(e.target)){
-        setToggleState(false); 
-      }
-    };
-
-    document.addEventListener("mousedown",handler);
-    return() =>{
-      document.removeEventListener("mousedown",handler);
+  const toggleTab = (index) => {
+    setToggleState(index);
+    if (toggleState === index) {
+      setToggleState(false);
     }
+  };
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setToggleState(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
   });
 
-  
-
   return (
-    <div className={toggleState === 1 ||toggleState === 2 || toggleState === 3|| toggleState === 4|| toggleState === 5 ? 'bd darker' : "bd"}>
-    
+    <div
+      className={
+        toggleState === 1 ||
+        toggleState === 2 ||
+        toggleState === 3 ||
+        toggleState === 4 ||
+        toggleState === 5
+          ? "bd darker"
+          : "bd"
+      }
+    >
       <nav>
         <div className="nav-mobile">
-          <div className="navbutton">
-            <div className="burger">
-            </div>
-            </div>
-            <div className="logo">
+          <div className="navbutton" onClick={toggleHamburger}>
+            <Burger isOpen={hamburgerOpen} />
+          </div>
+          <div className="logo">
             <img src="/bolt-logo.svg" alt="logo"></img>
           </div>
         </div>
@@ -73,191 +85,228 @@ export default function HomePage() {
           </div>
         </div>
         <div className="nav-bottom">
-          <div className="logo">
-            <img src="/bolt-logo.svg" alt="logo"></img>
+          <div className="nav-content">
+            <div className="navbutton" onClick={toggleHamburger}>
+              <div className="burger-close"></div>
+            </div>
+            <div className="logo">
+              <img src="/bolt-logo.svg" alt="logo"></img>
+            </div>
           </div>
-          <ul className="links" ref={menuRef} >
-            
-              <li className={toggleState === 1 ? "link active-link" : "link"}
-          onClick={() => toggleTab(1)}>Produkty
-          <div className={toggleState === 1 ? "drop  active-drop" : "drop"} >
-                <a>
+
+          <ul className="links" ref={menuRef}>
+            <li
+              className={toggleState === 1 ? "link active-link" : "link"}
+              onClick={() => toggleTab(1)}
+            >
+              Produkty
+              <div className={toggleState === 1 ? "drop  active-drop" : "drop"}>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Przejazdy</p>
                     <p>Zamów przejazd w kilka minut!</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Hulajnogi elektryczne</p>
                     <p>Wynajmij hulajnogę lub rower elektryczny</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Samochody na minuty</p>
-                    <p>Wynajem wysokiej jakości samochodów w przystępnych cenach</p>
+                    <p>
+                      Wynajem wysokiej jakości samochodów w przystępnych cenach
+                    </p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Dostawa Bolt Food</p>
                     <p>Twoje ulubione jedzenie z szybką dostawą</p>
                   </div>
                 </a>
-              
-                <a>
+
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Zakupy z dostawą</p>
                     <p>Podstawowe produkty z dostawą do domu</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Business</p>
-                    <p>Zarządzaj podróżami służbowymi dla swojego zespołu i klientów</p>
+                    <p>
+                      Zarządzaj podróżami służbowymi dla swojego zespołu i
+                      klientów
+                    </p>
                   </div>
                 </a>
-              </div></li>
+              </div>
+            </li>
 
-              
-            
-            
-              <li className={toggleState === 2 ? "link active-link" : "link"}
-          onClick={() => toggleTab(2)} >Zostań partnerem Bolt
-          <div className={toggleState === 2 ? "drop  active-drop" : "drop"}>
-                <a>
+            <li
+              className={toggleState === 2 ? "link active-link" : "link"}
+              onClick={() => toggleTab(2)}
+            >
+              Zostań partnerem Bolt
+              <div className={toggleState === 2 ? "drop  active-drop" : "drop"}>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Kierowca</p>
                     <p>Zarabiaj jako kierowca według własnego grafiku</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Dostawca</p>
                     <p>Zarabiaj na dostawach jedzenia i zakupów</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Restauracja lub Sklep</p>
-                    <p>Zdobądź więcej zamówień! Dodaj swoją restaurację lub sklepy do Bolt Food</p>
+                    <p>
+                      Zdobądź więcej zamówień! Dodaj swoją restaurację lub
+                      sklepy do Bolt Food
+                    </p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Flota</p>
                     <p>Zarabiaj więcej zgłaszając swoją flotę do Bolt</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bolt Franczyza</p>
-                    <p>Zbuduj i prowadź działalność w imieniu Bolt w swoim kraju</p>
+                    <p>
+                      Zbuduj i prowadź działalność w imieniu Bolt w swoim kraju
+                    </p>
                   </div>
                 </a>
-                
-              </div></li>
-              
-            
-            <li className={toggleState === 3 ? "link active-link" : "link"}
-          onClick={() => toggleTab(3)}><div className={toggleState === 3 ? "drop  active-drop" : "drop"}>
-                <a>
+              </div>
+            </li>
+
+            <li
+              className={toggleState === 3 ? "link active-link" : "link"}
+              onClick={() => toggleTab(3)}
+            >
+              O nas
+              <div className={toggleState === 3 ? "drop  active-drop" : "drop"}>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Kariera</p>
                     <p>Zatrudniamy 🔥</p>
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>O nas</p>
-                    
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Zielony Plan</p>
-                   
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Blog</p>
-                   
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Prasa</p>
-                    
                   </div>
                 </a>
-                
-              </div>O nas</li>
-            <li className="link">Pomoc</li>
-            <li className={toggleState === 4 ? "link active-link" : "link"}
-          onClick={() => toggleTab(4)}> <div className={toggleState === 4 ? "drop  active-drop" : "drop"}>
-                <a>
+              </div>
+            </li>
+            <li className="link" onClick={toggleHamburger}>Pomoc</li>
+            <li
+              className={toggleState === 4 ? "link active-link" : "link"}
+              onClick={() => toggleTab(4)}
+            >
+              Bezpieczeństwo
+              <div className={toggleState === 4 ? "drop  active-drop" : "drop"}>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bezpieczeństwo pasażerów</p>
-                    
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bezpieczeństwo kierowców</p>
-                    
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bezpieczna jazda na hulajnogach</p>
-                    
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Laboratorium bezpieczeństwa</p>
-                    
                   </div>
                 </a>
-                
-                
-              </div>Bezpieczeństwo</li>
-            <li className={toggleState === 5 ? "link active-link" : "link"}
-          onClick={() => toggleTab(5)}><div className={toggleState === 5 ? "drop  active-drop" : "drop"}>
-                <a>
+              </div>
+            </li>
+            <li
+              className={toggleState === 5 ? "link active-link" : "link"}
+              onClick={() => toggleTab(5)}
+            >
+              Miasta
+              <div className={toggleState === 5 ? "drop  active-drop" : "drop"}>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Miasta, w których nas znajdziesz</p>
-                    
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Lotniska</p>
-                    
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Rozwiązania dla mias</p>
-                   
                   </div>
                 </a>
-                <a>
+                <a onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Stacje ładowania</p>
-                    
                   </div>
                 </a>
-               
-              </div>Miasta</li>
+              </div>
+            </li>
           </ul>
+          <div className="nav-mobile-pl">
+          <div className="logo-pl">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="i2ian1"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM11.0511 3.49465C11.4347 3.11289 11.7544 3 12 3C12.2456 3 12.5653 3.11289 12.9489 3.49465C13.3365 3.88046 13.7316 4.48883 14.0849 5.32007C14.7001 6.76773 15.1289 8.75039 15.2281 11H8.7719C8.87106 8.75039 9.29987 6.76773 9.91513 5.32007C10.2684 4.48883 10.6635 3.88046 11.0511 3.49465ZM6.77014 11C6.87027 8.526 7.33921 6.26781 8.07447 4.53779C8.19472 4.25484 8.32375 3.98211 8.46165 3.72222C5.54238 4.97169 3.41748 7.72027 3.05493 11H6.77014ZM3.05493 13H6.77014C6.87027 15.474 7.33921 17.7322 8.07447 19.4622C8.19472 19.7452 8.32375 20.0179 8.46165 20.2778C5.54238 19.0283 3.41748 16.2797 3.05493 13ZM8.7719 13H15.2281C15.1289 15.2496 14.7001 17.2323 14.0849 18.6799C13.7316 19.5112 13.3365 20.1195 12.9489 20.5053C12.5653 20.8871 12.2456 21 12 21C11.7544 21 11.4347 20.8871 11.0511 20.5053C10.6635 20.1195 10.2684 19.5112 9.91513 18.6799C9.29987 17.2323 8.87106 15.2496 8.7719 13ZM17.2299 13C17.1297 15.474 16.6608 17.7322 15.9255 19.4622C15.8053 19.7452 15.6762 20.0179 15.5384 20.2778C18.4576 19.0283 20.5825 16.2797 20.9451 13H17.2299ZM20.9451 11C20.5825 7.72027 18.4576 4.97169 15.5384 3.72222C15.6762 3.98211 15.8053 4.25484 15.9255 4.53779C16.6608 6.26781 17.1297 8.526 17.2299 11H20.9451Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <p>Polski</p>
+              </div>
+              <p>© 2023 Bolt Technology OÜ</p>
+          </div>
         </div>
-        
       </nav>
 
-      <main >
+      <main>
         <div
           className="hero"
           style={{
@@ -266,7 +315,6 @@ export default function HomePage() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          
           <div className="hero-container">
             <div className="hero-text">
               <h1>Jeździsz dokąd chcesz, kiedy chcesz</h1>
@@ -669,18 +717,14 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="app-download">
-              <p>
-                Zamów przejazd
-              </p>
+              <p>Zamów przejazd</p>
               <div className="appstore">
                 <img src="/app.svg" alt="app"></img>
-                </div>
-                <p>
-                  Zamów jedzienie
-                </p>
-                <div className="appstore">
+              </div>
+              <p>Zamów jedzienie</p>
+              <div className="appstore">
                 <img src="/app.svg" alt="app"></img>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -791,7 +835,48 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-    
+      <style jsx='true'>{`
+        @media (max-width: 960px) {
+          body {
+            margin: 0;
+            height: ${hamburgerOpen ? "100%" : "auto"};
+            overflow: ${hamburgerOpen ? "hidden" : "auto"};
+          }
+          nav .nav-mobile .navbutton .burger::before {
+            top:${hamburgerOpen ? "6px" : "0"};
+            -webkit-transform:rotate${hamburgerOpen?"(45deg)":"(0)"};
+            transform:rotate${hamburgerOpen?"(45deg)":"(0)"};
+          }
+          nav .nav-mobile .navbutton .burger::after {
+            bottom:${hamburgerOpen ? "6px" : "0"};
+            box-shadow:${hamburgerOpen?"0 0 transparent":"0 -6px #2f313f;"}; 
+            -webkit-transform: rotate${hamburgerOpen?"(-45deg)":"(0)"};
+            transform: rotate ${hamburgerOpen ? "(-45deg)" : "(0)"};
+          }
+
+          nav .nav-bottom {
+            align-items: flex-start;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 602px;
+            overflow: hidden;
+            padding: 12px;
+            -webkit-transform:translateX${hamburgerOpen?"(0)":"(-100%)"};
+            transform:translateX${hamburgerOpen?"(0)":"(-100%)"};
+            transition:-webkit-transform${hamburgerOpen?"0.5s ease":"none"};
+            transition:transform${hamburgerOpen?"0.5s ease":"none"};
+            transition:transform ${hamburgerOpen?"0.5s ease":"none"},
+              -webkit-transform${hamburgerOpen ? "0.5s ease":"none"};
+            width: 100%;
+            z-index: 9999;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }

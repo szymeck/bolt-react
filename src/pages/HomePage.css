@@ -42,6 +42,9 @@ nav {
   direction: ltr;
   position: relative;
 }
+nav .nav-mobile {
+  display: none;
+}
 nav .nav-top {
   background-color: #f9fafb;
 }
@@ -87,6 +90,9 @@ nav .nav-bottom {
   padding-bottom: 8px;
   max-width: 1184px;
   margin-inline: auto;
+}
+nav .nav-bottom .nav-mobile-pl {
+  display: none;
 }
 nav .nav-bottom .logo {
   margin-top: 10px;
@@ -200,8 +206,7 @@ nav .nav-bottom ul .active-link:after {
 main .hero {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%), url("/src/hero.jpg");
   width: 100%;
-  height: 70vh;
-  min-height: 500px;
+  min-height: 600px;
   background-size: cover;
   color: white;
   padding: 20px;
@@ -215,6 +220,8 @@ main .hero .hero-container {
   display: flex;
   align-items: center;
   position: relative;
+  height: 100%;
+  min-height: 600px;
 }
 main .hero .hero-container .hero-text {
   width: 600px;
@@ -633,6 +640,9 @@ footer .container-top .top-content {
   margin-right: -20px;
   display: flex;
 }
+footer .container-top .top-content .app-download {
+  display: none;
+}
 footer .container-top .top-content .top-item {
   padding: 0 20px;
   width: 25%;
@@ -784,6 +794,12 @@ footer .container-bottom .box-bottom .box-right a:hover {
 }
 
 @media (max-width: 960px) {
+  .darker {
+    padding-right: 0;
+  }
+  .darker:after {
+    display: none;
+  }
   nav .nav-mobile {
     padding: 12px;
     display: flex;
@@ -814,7 +830,7 @@ footer .container-bottom .box-bottom .box-right a:hover {
     position: relative;
     width: 19px;
   }
-  nav .nav-mobile .navbutton .burger:after {
+  nav .nav-mobile .navbutton .burger::after {
     bottom: 0;
     box-shadow: 0 -6px #2f313f;
     background-color: #2f313f;
@@ -825,7 +841,7 @@ footer .container-bottom .box-bottom .box-right a:hover {
     transition: all 0.45s ease-in-out;
     width: 100%;
   }
-  nav .nav-mobile .navbutton .burger:before {
+  nav .nav-mobile .navbutton .burger::before {
     top: 0;
     transform: rotate(0);
     background-color: #2f313f;
@@ -845,7 +861,130 @@ footer .container-bottom .box-bottom .box-right a:hover {
     position: absolute;
     top: 0;
     transform: translateX(-100%);
-    padding-bottom: 101px !important;
+  }
+  nav .nav-bottom .nav-mobile-pl {
+    margin-top: auto;
+    margin-bottom: 12px;
+    position: relative;
+    display: block;
+  }
+  nav .nav-bottom .nav-mobile-pl .logo-pl {
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #f4f4f6;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 100px;
+  }
+  nav .nav-bottom .nav-mobile-pl .logo-pl img {
+    height: 20px;
+    margin-right: 4px;
+    max-width: 100%;
+  }
+  nav .nav-bottom .links {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav .nav-bottom .links .link {
+    padding-right: 40px;
+    font-weight: 600;
+    margin-right: 0;
+    padding-left: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 100%;
+  }
+  nav .nav-bottom .links .link:hover {
+    background-color: white;
+  }
+  nav .nav-bottom .links .link .active-drop {
+    padding: 0;
+  }
+  nav .nav-bottom .links .link .drop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    border-radius: 0;
+    box-shadow: none;
+    width: auto;
+    top: auto;
+  }
+  nav .nav-bottom .links .link .drop a .drop-item p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    font-weight: 400;
+  }
+  nav .nav-bottom .links .link .drop a .drop-item p:nth-child(2) {
+    display: none;
+  }
+  nav .nav-bottom .links .active-link {
+    background-color: white;
+  }
+  nav .nav-bottom .nav-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  nav .nav-bottom .nav-content .logo {
+    margin-top: 4px;
+    display: flex;
+    align-items: flex-end;
+  }
+  nav .nav-bottom .nav-content .navbutton {
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    margin-right: 24px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #f4f4f6;
+    border-radius: 24px;
+  }
+  nav .nav-bottom .nav-content .navbutton .burger-close {
+    height: 14px;
+    position: relative;
+    width: 19px;
+  }
+  nav .nav-bottom .nav-content .navbutton .burger-close:after {
+    background-color: #2f313f;
+    color: #fee7e9;
+    content: "";
+    height: 2px;
+    position: absolute;
+    transition: all 0.45s ease-in-out;
+    width: 100%;
+    bottom: 6px;
+    box-shadow: 0 0 transparent;
+    transform: rotate(-45deg);
+  }
+  nav .nav-bottom .nav-content .navbutton .burger-close:before {
+    background-color: #2f313f;
+    color: #fee7e9;
+    content: "";
+    height: 2px;
+    position: absolute;
+    transition: all 0.45s ease-in-out;
+    width: 100%;
+    top: 6px;
+    transform: rotate(45deg);
   }
   main .hero {
     padding: 0px;
@@ -1039,18 +1178,15 @@ footer .container-bottom .box-bottom .box-right a:hover {
     text-align: start;
   }
   main .container-4 .box-container4 {
-    margin-left: -24px;
-    margin-right: -24px;
+    padding-inline: 0;
     margin-bottom: 3rem;
   }
   main .container-4 .box-container4 .content-box {
     overflow-x: scroll;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-inline: 1.5rem;
     gap: 0.75rem;
     scrollbar-width: none;
-    -ms-scroll-snap-type: x mandatory;
-        scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
     max-width: 100%;
   }
   main .container-4 .box-container4 .content-box .box-item {

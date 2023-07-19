@@ -1,8 +1,8 @@
 .container {
   max-width: 1184px;
-  margin-top: 4.5rem;
   margin-inline: auto;
   transition: ease 0.15s;
+  overflow: hidden;
 }
 
 .buttons {
