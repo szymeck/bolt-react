@@ -48,7 +48,7 @@ function Tabs2() {
                 aplikację Bolt. Dostępne dla urządzeń z systemem iOS i Android.
               </p>
               <p>
-                Możesz również <a href="">zamówić przejazd online.</a>{" "}
+                Możesz również <a href="/">zamówić przejazd online.</a>{" "}
               </p>
             </div>
             <div className="section-img">
