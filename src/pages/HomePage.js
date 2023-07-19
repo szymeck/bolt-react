@@ -77,10 +77,10 @@ export default function HomePage() {
             </div>
             <div className="links">
               <p>Zostań partnerem Bolt jako:</p>
-              <a href="">Kierowca</a>
-              <a href="">Partner flotowy</a>
-              <a href="">Dostawca</a>
-              <a href="">Restauracja lub sklep</a>
+              <a href="/">Kierowca</a>
+              <a href="/">Partner flotowy</a>
+              <a href="/">Dostawca</a>
+              <a href="/">Restauracja lub sklep</a>
             </div>
           </div>
         </div>
@@ -101,19 +101,19 @@ export default function HomePage() {
             >
               Produkty
               <div className={toggleState === 1 ? "drop  active-drop" : "drop"}>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Przejazdy</p>
                     <p>Zamów przejazd w kilka minut!</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Hulajnogi elektryczne</p>
                     <p>Wynajmij hulajnogę lub rower elektryczny</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Samochody na minuty</p>
                     <p>
@@ -121,20 +121,20 @@ export default function HomePage() {
                     </p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Dostawa Bolt Food</p>
                     <p>Twoje ulubione jedzenie z szybką dostawą</p>
                   </div>
                 </a>
 
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Zakupy z dostawą</p>
                     <p>Podstawowe produkty z dostawą do domu</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Business</p>
                     <p>
@@ -152,19 +152,19 @@ export default function HomePage() {
             >
               Zostań partnerem Bolt
               <div className={toggleState === 2 ? "drop  active-drop" : "drop"}>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Kierowca</p>
                     <p>Zarabiaj jako kierowca według własnego grafiku</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Dostawca</p>
                     <p>Zarabiaj na dostawach jedzenia i zakupów</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Restauracja lub Sklep</p>
                     <p>
@@ -173,13 +173,13 @@ export default function HomePage() {
                     </p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Flota</p>
                     <p>Zarabiaj więcej zgłaszając swoją flotę do Bolt</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bolt Franczyza</p>
                     <p>
@@ -196,28 +196,28 @@ export default function HomePage() {
             >
               O nas
               <div className={toggleState === 3 ? "drop  active-drop" : "drop"}>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Kariera</p>
                     <p>Zatrudniamy 🔥</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>O nas</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Zielony Plan</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Blog</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Prasa</p>
                   </div>
@@ -231,22 +231,22 @@ export default function HomePage() {
             >
               Bezpieczeństwo
               <div className={toggleState === 4 ? "drop  active-drop" : "drop"}>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bezpieczeństwo pasażerów</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bezpieczeństwo kierowców</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Bezpieczna jazda na hulajnogach</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Laboratorium bezpieczeństwa</p>
                   </div>
@@ -259,22 +259,22 @@ export default function HomePage() {
             >
               Miasta
               <div className={toggleState === 5 ? "drop  active-drop" : "drop"}>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Miasta, w których nas znajdziesz</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Lotniska</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Rozwiązania dla mias</p>
                   </div>
                 </a>
-                <a onClick={toggleHamburger}>
+                <a href="/" onClick={toggleHamburger}>
                   <div className="drop-item">
                     <p>Stacje ładowania</p>
                   </div>
@@ -550,7 +550,7 @@ export default function HomePage() {
             <div className="header">
               <h2>Aktualności</h2>
               <div className="box-right">
-                <a href="">
+                <a href="/">
                   Zobacz wszystko
                   <svg
                     width="24"
@@ -570,7 +570,7 @@ export default function HomePage() {
             </div>
             <div className="content-box">
               <div className="box-item">
-                <a href="">
+                <a href="/">
                   <article>
                     <div className="item-image">
                       <img src="/image-4.png" alt=""></img>
@@ -581,7 +581,7 @@ export default function HomePage() {
                 </a>
               </div>
               <div className="box-item">
-                <a href="">
+                <a href="/">
                   <article>
                     <div className="item-image">
                       <img src="/image-5.jpg" alt=""></img>
@@ -595,7 +595,7 @@ export default function HomePage() {
                 </a>
               </div>
               <div className="box-item">
-                <a href="">
+                <a href="/">
                   <article>
                     <div className="item-image">
                       <img src="/image-6.jpg" alt=""></img>
@@ -648,28 +648,28 @@ export default function HomePage() {
               <h5>Bolt</h5>
               <ul>
                 <li>
-                  <a href="">Przejazdy</a>
+                  <a href="/">Przejazdy</a>
                 </li>
                 <li>
-                  <a href="">Dostawa Bolt Food</a>
+                  <a href="/">Dostawa Bolt Food</a>
                 </li>
                 <li>
-                  <a href="">Zakupy z dostawą</a>
+                  <a href="/">Zakupy z dostawą</a>
                 </li>
                 <li>
-                  <a href="">Hulajnogi elektryczne</a>
+                  <a href="/">Hulajnogi elektryczne</a>
                 </li>
                 <li>
-                  <a href="">Samochody na minuty</a>
+                  <a href="/">Samochody na minuty</a>
                 </li>
                 <li>
-                  <a href="">Business</a>
+                  <a href="/">Business</a>
                 </li>
                 <li>
-                  <a href="">Lotnisko</a>
+                  <a href="/">Lotnisko</a>
                 </li>
                 <li>
-                  <a href="">Miasta</a>
+                  <a href="/">Miasta</a>
                 </li>
               </ul>
             </div>
@@ -677,19 +677,19 @@ export default function HomePage() {
               <h5>Zostań partnerem Bolt</h5>
               <ul>
                 <li>
-                  <a href="">Zarejestruj się jako kierowca</a>
+                  <a href="/">Zarejestruj się jako kierowca</a>
                 </li>
                 <li>
-                  <a href="">Zarejestruj się jako dostawca</a>
+                  <a href="/">Zarejestruj się jako dostawca</a>
                 </li>
                 <li>
-                  <a href="">Floty</a>
+                  <a href="/">Floty</a>
                 </li>
                 <li>
-                  <a href="">Bolt franczyza</a>
+                  <a href="/">Bolt franczyza</a>
                 </li>
                 <li>
-                  <a href="">Influencerzy</a>
+                  <a href="/">Influencerzy</a>
                 </li>
               </ul>
             </div>
@@ -697,22 +697,22 @@ export default function HomePage() {
               <h5>O nas</h5>
               <ul>
                 <li>
-                  <a href="">O nas</a>
+                  <a href="/">O nas</a>
                 </li>
                 <li>
-                  <a href="">Kariera</a>
+                  <a href="/">Kariera</a>
                 </li>
                 <li>
-                  <a href="">Zielony plan</a>
+                  <a href="/">Zielony plan</a>
                 </li>
                 <li>
-                  <a href="">Prasa</a>
+                  <a href="/">Prasa</a>
                 </li>
                 <li>
-                  <a href="">Blog</a>
+                  <a href="/">Blog</a>
                 </li>
                 <li>
-                  <a href="">Wytyczne dotyczące marki</a>
+                  <a href="/">Wytyczne dotyczące marki</a>
                 </li>
               </ul>
             </div>
@@ -731,7 +731,7 @@ export default function HomePage() {
         <div className="container-bottom">
           <div className="box-top">
             <div className="box-left">
-              <a href="">
+              <a href="/">
                 <svg
                   width="24"
                   height="24"
@@ -745,7 +745,7 @@ export default function HomePage() {
                   ></path>
                 </svg>
               </a>
-              <a href="">
+              <a href="/">
                 <svg
                   width="24"
                   height="24"
@@ -759,7 +759,7 @@ export default function HomePage() {
                   ></path>
                 </svg>
               </a>
-              <a href="">
+              <a href="/">
                 <svg
                   width="24"
                   height="24"
@@ -779,7 +779,7 @@ export default function HomePage() {
                   ></path>
                 </svg>
               </a>
-              <a href="">
+              <a href="/">
                 <svg
                   width="24"
                   height="24"
@@ -801,7 +801,7 @@ export default function HomePage() {
                   ></path>
                 </svg>
               </a>
-              <a href="">
+              <a href="/">
                 <svg
                   width="24"
                   height="24"
@@ -827,10 +827,10 @@ export default function HomePage() {
               <p>© 2023 Bolt Technology OÜ</p>
             </div>
             <div className="box-right">
-              <a href="">Dostawcy</a>
-              <a href="">Przepisy i regulacje prawne</a>
-              <a href="">Pliki cookie</a>
-              <a href="">Bezpieczeństwo</a>
+              <a href="/">Dostawcy</a>
+              <a href="/">Przepisy i regulacje prawne</a>
+              <a href="/">Pliki cookie</a>
+              <a href="/">Bezpieczeństwo</a>
             </div>
           </div>
         </div>
