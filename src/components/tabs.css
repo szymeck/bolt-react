@@ -160,4 +160,18 @@
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .buttons li button:hover {
+    background-color: transparent;
+  }
+  .buttons li .active-button {
+    background: #2f313f;
+    color: white;
+  }
+  .buttons li .active-button:hover {
+    background: transparent;
+    color: #2f313f;
+  }
 }/*# sourceMappingURL=tabs.css.map */

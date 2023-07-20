@@ -837,9 +837,10 @@ export default function HomePage() {
       </footer>
       <style jsx='true'>{`
         @media (max-width: 960px) {
+         
           body {
-            margin: 0;
-            height: ${hamburgerOpen ? "100%" : "auto"};
+            
+            
             overflow: ${hamburgerOpen ? "hidden" : "auto"};
           }
           nav .nav-mobile .navbutton .burger::before {
@@ -861,7 +862,7 @@ export default function HomePage() {
             flex-direction: column;
             height: 100vh;
             max-width: 602px;
-            overflow: hidden;
+            overflow: auto;
             padding: 12px;
             -webkit-transform:translateX${hamburgerOpen?"(0)":"(-100%)"};
             transform:translateX${hamburgerOpen?"(0)":"(-100%)"};
